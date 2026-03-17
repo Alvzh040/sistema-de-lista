@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de compras</title>
+    </head>
+    <body>
+
+        <h2>lista de compras</h2>
+    <input type="text" id="Item" placeholder="Digite um numero">
+    <button onclick="AdicionarItem()"">Adicionar</button>"
+
+    <ul id="Lista"></ul>
+
+<Script>
+    function AdicionarItem() {
+        let Item = document.getElementById("item").value;
+
+        if (Item !==""){
+            let li = document.createElement("li");
+            li.textContent = Item;
+
+            li.onclick = function(){
+                this.style.textDecoration = "line-through";
+            };
+
+            document.getElementById("lista").appendChild(li);
+            document.getElementById("item").value = "";
+        }
+    }
+
+</Script>
+
+    
+</body>
+</html>
